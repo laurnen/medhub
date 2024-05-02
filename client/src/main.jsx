@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import Record from "./components/Record";
-import RecordList from "./components/RecordList";
+import Login from "./components/Login";
+import Welcome from "./components/Welcome";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -16,30 +16,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <RecordList />,
+        element: <Login />,
       },
     ],
   },
   {
-    path: "/edit/:id",
+    path: "/home",
     element: <App />,
     children: [
       {
-        path: "/edit/:id",
-        element: <Record />,
+        path: "/home",
+        element: <Welcome />,
       },
     ],
-  },
-  {
-    path: "/create",
-    element: <App />,
-    children: [
-      {
-        path: "/create",
-        element: <Record />,
-      },
-    ],
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
