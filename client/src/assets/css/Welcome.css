@@ -1,0 +1,17 @@
+.welcome {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.arrow {
+    animation: fadeIn2 2s;
+}
+
+@keyframes fadeIn2 {
+    0% { opacity: 0; }
+    100% { opacity: 0.25; }
+}
